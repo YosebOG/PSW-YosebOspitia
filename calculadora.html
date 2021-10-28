@@ -41,10 +41,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="calculadora.html">Calculadora</a>
+                        <a class="nav-link active" href="#">Calculadora</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="conversor.html">Conversor</a>
@@ -73,10 +73,54 @@
         </div>
     </nav>
     <!-- cuerpo de la página -->
-    <div class="container-sm" style="background-color: aquamarine;">
-        <section>
-            <p>sección</p>
-        </section>
+    <div class="container-sm col-md-9" style="background-color: #e9ecef;"> <!-- style="background-color: aquamarine;" -->
+        <form name="forCal" method="POST">
+            <div class="row justify-content-md-center pt-3">
+                <div class="col-xl-4">
+                    <div class="mb-2">
+                        <!-- <label for="exampleInputEmail1" class="form-label">Número 1</label> -->
+                        <input type="text" class="form-control form-control-lg" id="calNum1" name="calNum1" placeholder="Ingrese número 1">
+                    </div>
+                </div>
+                <div class="col-xl-4 mb-2 px-3 ps-xl-1 pe-xl-2"> <!-- style="background-color: burlywood;" -->
+                    <div class="row row-cols-6 row-cols-lg-6 g-2 g-lg-3 ">
+                        <div class="col text-center fs-4 d-grid p-1">
+                            <input type="Button" name="" value="+" onclick="sum()" class="btn btn-outline-success">
+                        </div>
+                        <div class="col text-center fs-4 d-grid p-1">
+                            <input type="Button" name="" value="-" onclick="res()" class="btn btn-outline-success">
+                        </div>
+                        <div class="col text-center fs-4 d-grid p-1">
+                            <input type="Button" name="" value="✱" onclick="mul()" class="btn btn-outline-success">
+                        </div>
+                        <div class="col text-center fs-4 d-grid p-1">
+                            <input type="Button" name="" value="/" onclick="div()" class="btn btn-outline-success">
+                        </div>
+                        <div class="col text-center fs-4 d-grid p-1">
+                            <input type="Button" name="" value="%" onclick="por()" class="btn btn-outline-success">
+                        </div>
+                        <div class="col text-center fs-4 d-grid p-1">
+                            <input type="Button" name="" value="AC" onclick="reset()" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="mb-2">
+                        <!-- <label for="exampleInputEmail1" class="form-label">Número 2</label> -->
+                        <input type="text" class="form-control form-control-lg" id="calNum2" name="calNum2" placeholder="Ingrese número 2">
+                    </div>
+                </div>
+            </div>
+            <hr class="h-divider">
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <div class="mb-3">
+                        <!-- <label for="exampleInputEmail1" class="form-label">Resultado</label> -->
+                        <input type="text" class="form-control form-control-lg" id="calRes" name="calRes" placeholder="Resultado">
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
     <!-- footer -->
     <div class="container fixed-bottom">
