@@ -1,6 +1,5 @@
 // CALCULADORA APP
-
-function sum(){
+/* function sum(){
     let num1 = document.forCal.calNum1.value;
     let num2 = document.forCal.calNum2.value;
     let calRes = document.forCal.calRes.value;
@@ -35,6 +34,18 @@ function por(){
     let calRes = document.forCal.calRes.value;
     calRes = parseFloat(num1)*(parseFloat(num2)/100);
     document.forCal.calRes.value = calRes;
+} */
+// CALCULADORA VENTAS
+function calVenta(){
+    let comVa = document.forCal.vaCom.value;
+    let utiVa = document.forCal.vaUti.value;
+    let ivaVa = document.forCal.vaIva.value;
+    let venRe = document.forCal.reVen.value;
+    let ganRe = document.forCal.reGan.value;
+    ganRe = parseFloat(comVa)*(parseFloat(utiVa)/100);
+    venRe = parseFloat(comVa)+parseFloat(ganRe)+(parseFloat(comVa)*parseFloat(ivaVa)/100);
+    document.forCal.reGan.value = ganRe;
+    document.forCal.reVen.value = venRe;
 }
 // CONVERSOR APP
 function calConversor(){
